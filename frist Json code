@@ -1,0 +1,5 @@
+{ "Laptop" :[ "size" : "24inch" ,
+               "type" : " Dell" ,
+			   "OS" : "windows" ,
+			   "additions" : ["black" , "external headphones" , "charge"]
+			   }
