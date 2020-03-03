@@ -1,0 +1,25 @@
+when i need to create page object :i will use this class and for every page test i will create page object
+package pageObject;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePageElements {
+
+	WebDriver driver;
+
+	public HomePageElements(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+	@FindBy(xpath = "//a[@class='btn btn-primary btn-xs-2 btn-shadow btn-rect btn-icon btn-icon-left']")
+	WebElement loginButton;
+
+	public WebElement loginButton() {
+		return loginbutton;
+	}
+
+}
