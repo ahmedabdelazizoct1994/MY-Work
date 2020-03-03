@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [freeCRM APPlication]">
+  <test thread-count="5" name="End To End Testing(failed)">
+    <classes>
+      <class name="com.freeCrm.testcases.homePage">
+        <methods>
+          <include name="clickOnContact"/>
+          <include name="nameIsdispalyedorNot"/>
+          <include name="preconditionLogin"/>
+        </methods>
+      </class> <!-- com.freeCrm.testcases.homePage -->
+      <class name="com.freeCrm.testcases.logInPageTest">
+        <methods>
+          <include name="logoIsDisplayedOrNot"/>
+          <include name="title"/>
+          <include name="tearDown"/>
+          <include name="precondtions"/>
+          <include name="urlcheck"/>
+          <include name="loginTestCases"/>
+        </methods>
+      </class> <!-- com.freeCrm.testcases.logInPageTest -->
+    </classes>
+  </test> <!-- End To End Testing(failed) -->
+</suite> <!-- Failed suite [freeCRM APPlication] -->
