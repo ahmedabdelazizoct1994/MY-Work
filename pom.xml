@@ -1,24 +1,4 @@
-Skip to content
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@ahmedabdelazizoct1994 
-Qacart
-/
-Hatem_Selenium-Collections
-forked from Hatamleh/Hatem_Selenium-Collections
-1
-15
- Code Pull requests 0 Actions Projects 0 Wiki Security Insights
-Hatem_Selenium-Collections/pom.xml
-@Hatamleh Hatamleh add java code
-9e1c6e7 on 16 Dec 2018
-@Hatamleh@hatemhatamleh
-169 lines (132 sloc)  3.88 KB
   
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
