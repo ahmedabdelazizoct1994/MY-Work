@@ -1,0 +1,58 @@
+pm.test("myfunction", function(){
+    
+    
+    let a={
+    "name":"ahmed"
+   
+};
+let b={
+    "name":"ahmed"};
+    
+    pm.expect(a).to.eql(b);
+
+});
+
+
+
+pm.expect([1, 2, 3]).to.have.lengthOf(3);
+pm.expect({a: 1}).to.have.property('a', 1);
+
+pm.expect([].length).tobe.eql(0);
+
+________________________________________
+Assertions on Arrays
+ if we have array
+ {
+    "companyId": 1234,
+    "regionId": 5678,
+    "filters": [
+        {
+            "id": 101,
+            "name": "Monsters",
+            "isAllowed": true
+        },
+        {
+            "id": 102,
+            "name": "tarek",
+            "isAllowed": false
+        },
+        {
+            "id": 103,
+            "name": "API Course",
+            "isAllowed": false
+        }
+    ]
+}
+
+1-
+constant JsonData=pm.response.Json();
+console.log(jonData.companyId);                                           :good  for maintainability
+console.log(jonData.filtets[3]);// check filter isallowed                 :
+2-for(let filter of jsonData.filter){
+if(filter.name=="monsters");{
+pm.expect(filter.name.to.eql("monsters")}
+
+
+
+
+

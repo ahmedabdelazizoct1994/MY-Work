@@ -1,0 +1,14 @@
+Greating dynamic requests
+for example: in trello ,create boards with different names
+
+
+create environment varaiable name =boardname
+
+1-write prerequest script:
+pm.environment.set("boradname","AhmedAli no."+ parseInt(math.$random()*1000));
+2- run requests
+3- write  test case
+ //verify status code is 200
+ pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});

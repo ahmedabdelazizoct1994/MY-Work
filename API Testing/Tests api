@@ -1,0 +1,105 @@
+frist test case
+when i have request to create board in trello site for example:
+1- go the url of POST boards form https://developers.trello.com/reference#api-key-tokens
+2-get token , key 
+
+
+
+
+*type url in url filed and in key / token in parameters 
+* click post send
+ 
+ 
+ tests
+ //verify status code is 200
+ pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+
+//verify name of created board
+pm.test("Your test name", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.name).to.eql(Board1);
+	
+	
+	
+	//verify that is not pinned and not closed
+	pm.test("board is not closed and  pinned", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.closed).to.eql(false);
+
+        pm.expect(jsonData.pinned).to.eql(false);
+
+});
+ 
+ //verify the permission is private
+ pm.test("board is not closed and  pinned", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.prfs.permission).to.eql(private);
+ 
+});
+   //bad scenario
+   change status code to see failure
+    pm.test("Status code is 200", function () {
+    pm.response.to.have.status(201);
+
+});
+we will see fail 
+//change the name of expected board
+
+pm.test("Your test name", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.name).to.eql(ahmed);
+});
+we wil see fail
+________________________________________________________________________
+if i want to create list on board through postman
+frist get url of list and parameters and boardid
+//type url in url field and parameters and key/token
+and click send and check list
+
+//verify status code is 200
+ pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+
+________________________________________________________________________
+refactoring code
+
+
+
+constant jsonData = pm.response.json();********************
+ pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+
+
+pm.test("Your test name", function () {
+    
+    pm.expect(jsonData.name).to.eql(Board1);
+	
+	
+	
+	
+	pm.test("board is not closed and  pinned", function () {
+
+    pm.expect(jsonData.closed).to.eql(false);
+
+        pm.expect(jsonData.pinned).to.eql(false);
+
+});
+ 
+
+ pm.test("board is not closed and  pinned", function () {
+    pm.expect(jsonData.prfs.permission).to.eql(private);
+ 
+
+
+
+
+
+   
+ 

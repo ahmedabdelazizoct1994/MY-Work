@@ -1,0 +1,35 @@
+Frist testing in API testing (AhmedAbdelazizoct1994@gmail.com)
+1- frist open postman and write in url field (httpbin.org) and  GET method to open this site
+and in tests filed write this Assertion
+
+
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+  2 second step
+  If you want to get uuid from this site set url (httpbin.org/uuid) GET method to get uuid of this site 
+  and i will save it to use in POST REquest
+
+
+let response=pm.response.json();
+
+pm.globals.set("uuid", response.uuid);
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+ 
+
+3-third step
+make POST request on (httpbin.org/uuid)
+with parameters 
+key1    value
+uuid    {{uuid}}
+and type in tests filed
+
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+ to do automation testing use collection runner
+ and for performance testing increment the iteratoion
+ 
